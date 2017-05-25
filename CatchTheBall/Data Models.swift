@@ -13,24 +13,22 @@ class UserData {
     
     private var username : String?
     private var ballsCaught: Int?
-    private var locations = [String]()
+    private var locations = [BallInfo]()
     
 }
 
-class ballInfo {
+class BallInfo {
     
-    private var latitude: CLLocationDegrees?
-    private var longitude: CLLocationDegrees?
+    var latitude = CLLocationDegrees()
+    var longitude = CLLocationDegrees()
+    var loacationName = String()
+    var locationDescription = String()
     
-    
-    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, locationName: String, locationDescription: String) {
         self.longitude = longitude
         self.latitude = latitude
+        self.loacationName = locationName
+        self.locationDescription = locationDescription
     }
 }
 
-class moreBallInfo {
-    
-    private var coordinates: CLLocationCoordinate2D?
-    
-}
