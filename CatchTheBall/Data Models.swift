@@ -18,15 +18,11 @@ class UserData {
 }
 
 class BallInfo {
-    
-    var latitude = CLLocationDegrees()
-    var longitude = CLLocationDegrees()
+
     var loacationName = String()
     var locationDescription = String()
     
-    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, locationName: String, locationDescription: String) {
-        self.longitude = longitude
-        self.latitude = latitude
+    init(locationName: String, locationDescription: String) {
         self.loacationName = locationName
         self.locationDescription = locationDescription
     }

@@ -39,22 +39,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let catchBallAlert = UIAlertController(title: "Ooops...", message: "Looks like you dropped the ball, go catch it!!!", preferredStyle: .alert)
         let goAlertAction = UIAlertAction(title: "I'm On It!", style: .cancel) { (UIAlertAction) in
-            
             self.getNewBall()
+            self.title = "Catch The Ball"
         }
         
         catchBallAlert.addAction(goAlertAction)
         
         let time = DispatchTime.now() + 7
         DispatchQueue.main.asyncAfter(deadline: time) {
-            
-            self.present(catchBallAlert, animated: true, completion: nil)
-            
+        self.present(catchBallAlert, animated: true, completion: nil)
         }
     }
     
+    //uses local search request to find closest possible ball locations
     func getNewBall() {
-        //First: use the location search to pull local info (print to Command Line)
         let localSearch = MKLocalSearchRequest()
         localSearch.naturalLanguageQuery = "Coffee"
         localSearch.region = mapView.region
@@ -71,16 +69,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 print("Matches  found")
                 
                 for item in response!.mapItems {
-                    
                     let annotation = MKPointAnnotation()
                     annotation.coordinate = item.placemark.coordinate
-                    annotation.title = item.name
+                    annotation.title = "Ball"
                     self.mapView.addAnnotation(annotation)
-                    
                 }
             }
         }
-        
     }
     
     //shows user location
@@ -91,14 +86,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 if annotaion is MKUserLocation {
                     let region = MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 600, 600)
                     self.mapView.setRegion(region, animated: true)
-                    
                 }
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if (segue.identifier) == "ToAugmentedRealitySegue" {
             
         }

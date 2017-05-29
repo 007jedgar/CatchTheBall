@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13E84E771ED790BE006C299D /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E84E761ED790BE006C299D /* ARViewController.swift */; };
+		13E84E7B1EDB6F8D006C299D /* AugmentedRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E84E7A1EDB6F8D006C299D /* AugmentedRViewController.swift */; };
 		AB1522301EAFCFBF008A34CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15222F1EAFCFBF008A34CD /* AppDelegate.swift */; };
 		AB1522321EAFCFBF008A34CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1522311EAFCFBF008A34CD /* ViewController.swift */; };
 		AB1522351EAFCFBF008A34CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB1522331EAFCFBF008A34CD /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13E84E761ED790BE006C299D /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		13E84E7A1EDB6F8D006C299D /* AugmentedRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedRViewController.swift; sourceTree = "<group>"; };
 		5AEE750A77FEE7EDD1475B6C /* Pods-CatchTheBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchTheBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchTheBall/Pods-CatchTheBall.release.xcconfig"; sourceTree = "<group>"; };
 		87071BADD3697D464233F14D /* Pods-CatchTheBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchTheBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchTheBall/Pods-CatchTheBall.debug.xcconfig"; sourceTree = "<group>"; };
 		AB15222C1EAFCFBE008A34CD /* CatchTheBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchTheBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				AB1522451EAFD29C008A34CD /* MapViewController.swift */,
+				13E84E761ED790BE006C299D /* ARViewController.swift */,
+				13E84E7A1EDB6F8D006C299D /* AugmentedRViewController.swift */,
 			);
 			name = "Views From The 6";
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 			files = (
 				AB1522321EAFCFBF008A34CD /* ViewController.swift in Sources */,
 				AB1522431EAFD081008A34CD /* Data Models.swift in Sources */,
+				13E84E7B1EDB6F8D006C299D /* AugmentedRViewController.swift in Sources */,
 				AB1522301EAFCFBF008A34CD /* AppDelegate.swift in Sources */,
 				AB1522461EAFD29C008A34CD /* MapViewController.swift in Sources */,
+				13E84E771ED790BE006C299D /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				AB1522401EAFCFBF008A34CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

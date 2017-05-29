@@ -211,7 +211,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Found" id="zav-1R-oRy"/>
                                         <barButtonItem key="rightBarButtonItem" title="Augment" id="zB6-Za-ZWB">
                                             <connections>
-                                                <segue destination="fZS-hj-r8f" kind="show" id="QHh-s2-LKC">
+                                                <segue destination="fZS-hj-r8f" kind="show" identifier="ToAugmentedRealitySegue" id="QHh-s2-LKC">
                                                     <nil key="action"/>
                                                 </segue>
                                             </connections>
@@ -231,6 +231,9 @@
                     <navigationItem key="navigationItem" id="0U7-ea-5nq">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="nHA-yD-hri">
                             <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="augmentReality:" destination="fZq-ot-3mS" id="yCi-R9-WA6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -244,7 +247,7 @@
         <!--View Controller-->
         <scene sceneID="CGT-VK-z37">
             <objects>
-                <viewController id="fZS-hj-r8f" customClass="ARViewController" sceneMemberID="viewController">
+                <viewController id="fZS-hj-r8f" customClass="ARViewController" customModule="CatchTheBall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vh5-nN-3Hy"/>
                         <viewControllerLayoutGuide type="bottom" id="92p-aC-nmY"/>
